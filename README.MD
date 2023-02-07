@@ -1,4 +1,4 @@
-## Quickstart Django & React Repository
+## Off The Road Collective Ecommerce Full Stack
 
 This repository contains a preconfigured Django 4.0.5 with React project.
 Django comes pre-configured to use React's build files as its templates and automatically takes them into the 'static/' directory using python manage.py collectstatic
@@ -12,7 +12,7 @@ The React frontend comes with TailwindCSS pre-installed.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/kmanjt/django-react-quickstart.git
+git clone https://github.com/kmanjt/otrc-ecommerce.git
 ```
 
 2. Create a virtual environment and activate it
