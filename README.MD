@@ -40,3 +40,18 @@ python manage.py runserver
 ```bash
 npm start
 ```
+
+### Frontend Components
+- Nav
+- Hero
+- Footer
+- Mission
+- About
+- Product cards
+- Shopping card
+- Account login / dashboard
+
+### Backend Models
+- Card
+- Account
+- Inventory
