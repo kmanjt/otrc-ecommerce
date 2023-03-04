@@ -17,10 +17,14 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-3. Install the required packages from the backend/ directory
+3. Install the required packages from the backend/ and frontend/ directory
 
-```
+```bash
 pip install -r requirements.txt
+```
+
+```bash
+npm install
 ```
 
 4. Set up the environment variables which are shown in .env.example in backend/ directory
@@ -48,10 +52,20 @@ npm start
 - Mission
 - About
 - Product cards
-- Shopping card
+- Shopping cart
+- Checkout
 - Account login / dashboard
 
+### Frontend Pages
+- Home
+- Community 
+
 ### Backend Models
-- Card
+- Shopping Cart
 - Account
 - Inventory
+- Checkout
+
+### Contributors 
+| [kmanjt](https://github.com/kmanjt)| [rbanik2212](https://github.com/rbanik2212) | [calcifer2002](https://github.com/Calcifer2002) | [sio-the-deal](https://github.com/Sio-The-Deal) | [ngowran](https://github.com/ngowran) |
+| ------------- | ------------- | ------------- | ------------- |------------- |
