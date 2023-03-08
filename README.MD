@@ -27,7 +27,7 @@ pip install -r requirements.txt
 npm install
 ```
 
-4. Set up the environment variables which are shown in .env.example in backend/ directory
+4. Make a new .env file in the backend directory containing the environment variables which are shown in .env.example in backend/ directory 
 
 5. Set up the database
 
