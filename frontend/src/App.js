@@ -2,6 +2,9 @@ import "./App.css";
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import ShoppingCart from "./pages/ShoppingCart";
+import Community from "./pages/Community";
+import Nav from "./components/Nav";
 
 function App() {
   /*
@@ -24,8 +27,11 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route index element={<Home />} exact />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
     </BrowserRouter>
   );
