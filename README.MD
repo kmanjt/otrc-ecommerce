@@ -10,11 +10,19 @@
 git clone https://github.com/kmanjt/otrc-ecommerce.git
 ```
 
-2. Create a virtual environment and activate it
+2. Create a virtual environment in the root directory of the project and activate it
 
+- Create virtual environment
 ```bash
 python -m venv venv
+```
+- In Linux, to activate venv:
+```bash
 source venv/bin/activate
+```
+- In Windows, to activate venv:
+```bash
+.\venv\Scripts\activate.bat
 ```
 
 3. Install the required packages from the backend/ and frontend/ directory
@@ -67,5 +75,5 @@ npm start
 - Checkout
 
 ### Contributors 
-| [kmanjt](https://github.com/kmanjt)| [rbanik2212](https://github.com/rbanik2212) | [calcifer2002](https://github.com/Calcifer2002) | [sio-the-deal](https://github.com/Sio-The-Deal) | [ngowran](https://github.com/ngowran) |
-| ------------- | ------------- | ------------- | ------------- |------------- |
+| [kmanjt](https://github.com/kmanjt)| [rbanik2212](https://github.com/rbanik2212) | [calcifer2002](https://github.com/Calcifer2002) | [sio-the-deal](https://github.com/Sio-The-Deal) | [ngowran](https://github.com/ngowran) | [CheezyHint](https://github.com/ChoaHin)|
+| ------------- | ------------- | ------------- | ------------- |------------- | ------------- |
