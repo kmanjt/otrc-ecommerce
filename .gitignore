@@ -1,3 +1,11 @@
 /backend/.env
 /venv
 /backend/migrations
+/backend/base/migrations
+/backend/products/migrations
+/backend/backend/__pycache__
+/backend/products/__pycache__
+/backend/base/__pycache__
+/backend/static
+/backend/db.sqlite3
+/backend/media/images
