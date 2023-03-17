@@ -19,12 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('base.urls')),
-    path('api/products/', include('products.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('api/', include('base.urls')),
+                  path('api/products/', include('products.urls')),
+                  path('api/accounts/', include('otrc_accounts.urls'))
+
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

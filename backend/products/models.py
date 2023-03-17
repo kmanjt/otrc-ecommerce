@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+from backend import settings
 
 
 class ProductImage(models.Model):
@@ -55,7 +56,7 @@ class Review(models.Model):
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.SET_NULL, null=True, blank=True)
     user = models.ForeignKey(
-        User, related_name='reviews', on_delete=models.SET_NULL, null=True, blank=True)
+        settings.AUTH_USER_MODEL, related_name='reviews', on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=200, null=True, blank=True)
     rating = models.IntegerField(null=True, blank=True, default=0)
     comment = models.TextField(null=True, blank=True, default=0)
@@ -68,7 +69,7 @@ class Review(models.Model):
 class Order(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
     user = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, blank=True)
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
     payment_method = models.CharField(max_length=200, null=True, blank=True)
     tax_price = models.DecimalField(
         max_digits=7, decimal_places=2, null=True, blank=True)
