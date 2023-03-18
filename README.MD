@@ -69,10 +69,12 @@ npm start
 - Community 
 
 ### Backend Models
-- Shopping Cart
+- Product model with supporting foreign key models
+- Review model
+- Order model
+- Cart item model
+- Shipping Address Model
 - Account
-- Inventory
-- Checkout
 
 ### Contributors 
 | [kmanjt](https://github.com/kmanjt)| [rbanik2212](https://github.com/rbanik2212) | [calcifer2002](https://github.com/Calcifer2002) | [sio-the-deal](https://github.com/Sio-The-Deal) | [ngowran](https://github.com/ngowran) | [CheezyHint](https://github.com/ChoaHin)|
