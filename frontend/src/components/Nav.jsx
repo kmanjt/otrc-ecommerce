@@ -2,12 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import logo from "../assets/oftc.jpg";
+import "./NavStyles.css";
 
 const Nav = () => {
   return (
-    <div>
-      <div className="grid grid-cols-8 pl-16 text-left font-bold bg-otrc-green text-white p-4">
-        <div>
+    <nav>
+
+        <a href="/">
+        <img
+          src={logo}
+          alt="otrc logo"
+          className="w-16 h-16 rounded-full"
+        />
+        </a>
+
+
+
+        {/* <div>
           <Link to="/">Home</Link>
         </div>
         <div className="col-span-6">
@@ -17,16 +28,43 @@ const Nav = () => {
           <Link to="/shoppingcart">
             <AiOutlineShoppingCart className="w-8 h-8" />
           </Link>
+        </div> */}
+        <div>
+          <ul id="nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/community">Community</a>
+            </li>
+
+            <li>
+              <a href="/shoppingcart">Cart</a>
+            </li>
+
+          </ul>
+
         </div>
-      </div>
-      <div className="mx-auto pt-4">
-        <img
-          src={logo}
-          alt="otrc logo"
-          className="w-52 h-52 mx-auto rounded-full"
-        />
-      </div>
-    </div>
+
+
+
+        <div id="mobile">
+          <i className="fas fa-bars"></i>
+        </div>
+
+
+
+
+        {/* <div className="mx-auto pt-4">
+          <img
+            src={logo}
+            alt="otrc logo"
+            className="w-52 h-52 mx-auto rounded-full"
+          />              
+
+        </div> */}    
+    </nav>
   );
 };
 
