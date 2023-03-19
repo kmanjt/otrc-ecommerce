@@ -10,11 +10,13 @@ from django.utils import timezone
 class AccountManager(BaseUserManager):
     def _create_user(self, email, phone, password, forename, surname, address1, address2, county, eircode,
                      **extra_fields):
-        values = [email, phone, forename, surname, address1, county, eircode]
-        field_value_map = dict(zip(self.model.REQUIRED_FIELDS, values))
-        for field_name, value in field_value_map.items():
-            if not value:
-                raise ValueError('The {} value must be set'.format(field_name))
+        print("here")
+        # values = [email, phone, forename, surname, address1, county, eircode]
+        # field_value_map = dict(zip(self.model.REQUIRED_FIELDS, values))
+        # for field_name, value in field_value_map.items():
+        #     if not value:
+        #         raise ValueError('The {} value must be set'.format(field_name))
+        print("here")
 
         email = self.normalize_email(email)
         user = self.model(
@@ -36,6 +38,7 @@ class AccountManager(BaseUserManager):
                     **extra_fields):
 
         extra_fields.setdefault('is_superuser', False)
+        print("here")
 
         return self._create_user(email, phone, password, forename, surname, address1, address2, county, eircode,
                                  **extra_fields)
@@ -49,6 +52,9 @@ class AccountManager(BaseUserManager):
 
         return self._create_user(email, phone, password, forename, surname, address1, address2, county, eircode,
                                  **extra_fields)
+
+    def __str__(self):
+        return "it worked !!!"
 
 
 class Account(AbstractBaseUser, PermissionsMixin):
@@ -65,7 +71,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=50)
     date_joined = models.DateTimeField(default=timezone.now)
-    last_login = models.DateTimeField(null=True)
+    # last_login = models.DateTimeField(null=True)
     forename = models.CharField(verbose_name="forename", max_length=255, null=True)
     surname = models.CharField(verbose_name="surname", max_length=255, null=True)
     address1 = models.CharField(verbose_name="address", max_length=255, null=True)

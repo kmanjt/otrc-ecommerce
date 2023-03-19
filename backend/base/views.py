@@ -15,5 +15,6 @@ def getRoutes(request):
         '/api/products/<id>/',
         '/api/products/delete/<id>/',
         '/api/products/<update>/<id>/',
+
     ]
     return Response(routes)

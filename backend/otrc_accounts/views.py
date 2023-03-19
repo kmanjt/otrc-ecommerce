@@ -5,7 +5,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from otrc_accounts.models import Account
+from otrc_accounts.models import Account, AccountManager
 from otrc_accounts.serializers import AccountSerializer
 
 
@@ -13,16 +13,20 @@ from otrc_accounts.serializers import AccountSerializer
 def getAccounts(request):
     accounts = Account.objects.all()
     serializer = AccountSerializer(accounts, many=True)
-    return Response(serializer.data, status=200)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def getAccount(request, pk):
+    account = Account.objects.get(pk=pk)
+    serializer = AccountSerializer(account)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['POST'])
 def createAccounts(request):
-    print("here")
-    serializer = AccountSerializer(request.data)
+    serializer = AccountSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
-
-        return Response({"message": "Account created successfully"}, status=status.HTTP_201_CREATED)
-
-    return Response({"message": "unsuccessful"}, status=status.HTTP_400_BAD_REQUEST)
+        account = serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
