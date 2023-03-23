@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
 import Community from "./pages/Community";
 import Nav from "./components/Nav";
-
+import Login from "./components/login";
 function App() {
   /*
   // set the favicon to the icon in the assets folder
