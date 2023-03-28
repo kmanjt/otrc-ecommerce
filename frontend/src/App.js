@@ -1,11 +1,11 @@
 import "./App.css";
-import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
 import Community from "./pages/Community";
 import Nav from "./components/Nav";
-import Login from "./components/login";
+import Registration from "./pages/registration";
 function App() {
   /*
   // set the favicon to the icon in the assets folder
@@ -32,6 +32,7 @@ function App() {
         <Route index element={<Home />} exact />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import logo from "../assets/oftc.jpg";
 import Login from "./login";
 
-const Nav = (props) => {
+const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
