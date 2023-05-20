@@ -107,8 +107,8 @@ const Nav = () => {
       </div>
 
       {!sideView && (
-        <div className=" lg:w-[15%] lg:h-[15%] w-36 h-32 mx-auto p-4 relative">
-          <img src={logo} alt="otrc logo" className="  mx-auto rounded-full" />
+        <div className=" lg:w-56 lg:h-56 w-36 h-36 mx-auto p-4 relative">
+          <img src={logo} alt="otrc logo" className=" mx-auto rounded-full" />
         </div>
       )}
     </div>
